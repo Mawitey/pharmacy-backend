@@ -1,18 +1,26 @@
-document.getElementById("header").innerHTML = `
-  <h1>Pharmacy Admin Page</h1>
-`;
+// document.getElementById("header").innerHTML = `
+//   <h1>Pharmacy Admin Page</h1>
+// `;
+
 
 document.getElementById("footer").innerHTML = `
   <p>&copy; 2025 My Pharmacy</p>
 `;
 
+document.getElementById("logoutBtn").addEventListener("click", () => {
+    // If using Spring Security, redirect to /logout
+    window.location.href = "/logout";
+
+    // If no Spring Security, simple redirect to index.html
+    // window.location.href = "/index.html";
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const tableBody = document.querySelector("#refill-table tbody");
     const searchInput = document.getElementById("search-input");
 
     // Header & Footer injection
-    document.getElementById("header").innerHTML = "<h1>Pharmacy Admin Page</h1>";
+    //document.getElementById("header").innerHTML = "<h1>Pharmacy Admin Page</h1>";
     document.getElementById("footer").innerHTML = "<p>&copy; 2025 My Pharmacy</p>";
 
     let refillRequests = [];
@@ -33,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             tableBody.appendChild(row);
         });
     }
+
 
     // Fetch refill requests from backend
     fetch("/api/refills/all")
@@ -77,3 +86,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
