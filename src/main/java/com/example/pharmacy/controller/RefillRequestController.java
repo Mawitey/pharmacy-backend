@@ -2,38 +2,42 @@ package com.example.pharmacy.controller;
 
 import com.example.pharmacy.model.RefillRequest;
 import com.example.pharmacy.repository.RefillRequestRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.lowagie.text.Document;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfWriter;
 import jakarta.servlet.http.HttpServletResponse;
 
-import com.lowagie.text.Document;
 import com.lowagie.text.Element;
 import com.lowagie.text.Font;
 import com.lowagie.text.FontFactory;
-import com.lowagie.text.Paragraph;
 import com.lowagie.text.Phrase;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
-import com.lowagie.text.pdf.PdfWriter;
-
-import jakarta.servlet.http.HttpServletResponse;
 
 import java.util.List;
 
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/refills")
 public class RefillRequestController {
 
-    private final RefillRequestRepository repository;
+    private final RefillRequestRepository refillRequestRepository;
 
-    public RefillRequestController(RefillRequestRepository repository) {
-        this.repository = repository;
+    public RefillRequestController(RefillRequestRepository refillRequestRepository) {
+        this.refillRequestRepository = refillRequestRepository;
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRefillRequest(@PathVariable Long id) {
+        if (!refillRequestRepository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        refillRequestRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 
     // POST: Submit a new refill request
@@ -42,7 +46,7 @@ public class RefillRequestController {
 
         refillRequest.setTimestamp(LocalDateTime.now());
 
-        RefillRequest saved = repository.save(refillRequest);
+        RefillRequest saved = refillRequestRepository.save(refillRequest);
 
         return saved.getId();
     }
@@ -50,7 +54,7 @@ public class RefillRequestController {
     // GET: Return all refill requests for admin
     @GetMapping("/all")
     public List<RefillRequest> getAllRefills() {
-        return repository.findAll();
+        return refillRequestRepository.findAll();
     }
 
     @GetMapping("/export")
@@ -62,7 +66,7 @@ public class RefillRequestController {
                 "attachment; filename=refill_requests.pdf"
         );
 
-        List<RefillRequest> requests = repository.findAll();
+        List<RefillRequest> requests = refillRequestRepository.findAll();
 
         Document document = new Document();
         PdfWriter.getInstance(document, response.getOutputStream());
@@ -112,6 +116,5 @@ public class RefillRequestController {
             table.addCell(r.getPrescription());
         }
     }
-
 
 }
