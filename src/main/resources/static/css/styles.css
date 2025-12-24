@@ -1,0 +1,532 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f5f9fc;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header */
+header#header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header#header h1 {
+    font-size: 1.8em;
+}
+
+header#header nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+header#header nav a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007bff;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1em;
+}
+
+/* Refill Form */
+#refill-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+form h3 {
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button */
+button#submitBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+button#submitBtn:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+button#submitBtn:disabled {
+    background-color: #94d3a2;
+    cursor: not-allowed;
+}
+
+/* Message */
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer */
+footer#footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+footer#footer a {
+    color: #f8f9fa;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+footer#footer a:hover {
+    color: #ffd700;
+}
+
+/* Admin Table */
+#admin-table-container {
+    max-width: 900px;
+    margin: 20px auto 40px auto;
+    overflow-x: auto;
+}
+
+#adminTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#adminTable th,
+#adminTable td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#adminTable th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header#header nav {
+        margin-top: 10px;
+    }
+
+    #refill-form, #admin-table-container {
+        width: 90%;
+        margin: 0 auto 30px auto;
+    }
+}
+
+#refillForm input,
+#refillForm textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 8px 14px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a93226;
+}
+
+.admin-controls {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.admin-controls input {
+    width: 300px;
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+
+.hero {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+
+.btn-primary {
+    background: white;
+    color: #0d6efd;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.btn-primary:hover {
+    background: #e9ecef;
+}
+
+
+.features {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+
+.feature {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8fafc;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #0d6efd;
+}
+
+.testimonials {
+    background: #f1f5ff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 260px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.location {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+}
+
+.location h2 {
+    margin-bottom: 20px;
+}
+
+.hours {
+    margin-top: 15px;
+}
+
+/* ================================
+   HEADER / NAVIGATION
+================================ */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #0d6efd;
+}
+/* ================================
+   TESTIMONIALS
+================================ */
+
+.testimonials {
+    background: #f8fafc;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #111827;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+/* ================================
+   LOCATION & HOURS
+================================ */
+
+.location {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+}
+
+.location h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.location p {
+    font-size: 1rem;
+    color: #374151;
+    margin: 6px 0;
+}
+
+.hours {
+    margin-top: 20px;
+    background: #f1f5ff;
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+.hours p {
+    margin: 4px 0;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .features,
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .feature,
+    .testimonial {
+        width: 90%;
+    }
+
+    .hours {
+        width: 90%;
+    }
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+

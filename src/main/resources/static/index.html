@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthCare Pharmacy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="logo">
+        💊 HealthCare Pharmacy
+    </div>
+
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="#refill-form">Refill</a>
+        <a href="/admin.html">Admin</a>
+    </nav>
+</header>
+
+
+<section class="hero fade-in">
+    <div class="hero-content">
+        <h1>Your Neighborhood Pharmacy</h1>
+        <p>Fast, secure prescription refills you can trust.</p>
+        <a href="#refill-form" class="btn-primary">Request a Refill</a>
+    </div>
+</section>
+
+<section class="features fade-in">
+    <div class="feature">
+        <h3>💊 Easy Refills</h3>
+        <p>Submit your refill in under a minute.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🕒 Fast Processing</h3>
+        <p>We process requests quickly and securely.</p>
+    </div>
+
+    <div class="feature">
+        <h3>📍 Local Care</h3>
+        <p>Personal service from your trusted pharmacy.</p>
+    </div>
+</section>
+
+<section class="testimonials fade-in">
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonial-cards">
+        <div class="testimonial">
+            <p>“Fast refills and friendly staff. Highly recommend!”</p>
+            <span>— Sarah M.</span>
+        </div>
+
+        <div class="testimonial">
+            <p>“So easy to request refills online. Love this pharmacy.”</p>
+            <span>— James K.</span>
+        </div>
+
+        <div class="testimonial">
+            <p>“Reliable, local, and professional service every time.”</p>
+            <span>— Maria L.</span>
+        </div>
+    </div>
+</section>
+
+
+
+<div id="refill-form">
+    <form id="refillForm">
+        <h3>Prescription Refill Request</h3>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="(123) 456-7890" required>
+
+        <label for="prescription">Prescription Details</label>
+        <textarea id="prescription" placeholder="Enter your prescription details" required></textarea>
+
+        <button type="submit" id="submitBtn">Submit Request</button>
+
+        <p id="message"></p>
+    </form>
+</div>
+
+<section class="location fade-in">
+    <h2>Visit Us</h2>
+
+    <p><strong>Address:</strong> 123 Main Street, Columbus, OH</p>
+    <p><strong>Phone:</strong> (614) 555-1234</p>
+
+    <div class="hours">
+        <p><strong>Hours:</strong></p>
+        <p>Mon–Fri: 9am – 7pm</p>
+        <p>Sat: 9am – 3pm</p>
+        <p>Sun: Closed</p>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <p>&copy; 2025 HealthCare Pharmacy. All rights reserved.</p>
+        <p>Email: info@healthcarepharmacy.com | Phone: (123) 456-7890</p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms & Conditions</a>
+        </p>
+    </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>

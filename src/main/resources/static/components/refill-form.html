@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="refill-form" id="refillForm" novalidate>
+    <h3>Request a Refill</h3>
+
+    <label for="name">Full Name</label>
+    <input id="name" type="text" required />
+
+    <label for="phone">Phone Number</label>
+    <input id="phone" type="tel" required />
+
+    <label for="prescription">Prescription Name</label>
+    <input id="prescription" type="text" required />
+
+    <button type="submit" id="submitBtn">Submit Request</button>
+
+    <p id="formMessage" aria-live="polite"></p>
+</form>
+</body>
+</html>
